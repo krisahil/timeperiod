@@ -1,0 +1,23 @@
+{
+    "name": "drupal/timeperiod",
+    "description": "Clone of the Drupal timeperiod module to allow for creation of the 8.x branch.",
+    "type": "drupal-module",
+    "keywords": ["Drupal"],
+    "homepage": "https://github.com/r0nn1ef/timeperiod",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ronald Ferguson",
+            "email": "r0nn1ef8580@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "8.x-2.x": "2.x-dev"
+        }
+    },
+    "require": {
+        "drupal/diff": "~1.0"
+    }
+}
