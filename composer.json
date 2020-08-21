@@ -14,7 +14,7 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "8.x-2.x": "2.x-dev"
+            "dev-8.x-2.x": "2.0-dev"
         }
     },
     "require": {
