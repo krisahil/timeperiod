@@ -17,7 +17,8 @@ Usage
 
 Known Issues
 
- * Field formatter not available for fields in Views with aggregation enabled.
+ * Field formatter not available for fields in Views with aggregation enabled. See [this post](https://www.drupal.org/project/commerce_reports/issues/2975099#comment-12628089)
+   on reasons for this.
    
 Maintainers:
 

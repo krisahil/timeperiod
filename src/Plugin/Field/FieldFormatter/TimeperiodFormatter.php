@@ -9,14 +9,23 @@ namespace Drupal\timeperiod\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\NumericFormatterBase;
+# use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 
 
 /**
  * @FieldFormatter(
- *  id = "timeperiod",
+ *  id = "number_timeperiod",
  *  label = @Translation("Time period"),
- *  field_types = {"integer"}
+ *  field_types = {
+ *     "integer"
+ *   },
+ *   settings = {
+ *     "granularity" = "4"
+ *   },
+ *   edit = {
+ *     "editor" = "form"
+ *   }
  * )
  */
 class TimeperiodFormatter extends NumericFormatterBase {
@@ -40,6 +49,7 @@ class TimeperiodFormatter extends NumericFormatterBase {
       '#max' => 4,
       '#default_value' => $this->getSetting('granularity'),
       '#description' => t('The number of different units to display.'),
+      '#required' => TRUE,
     ];
 
     return $element;

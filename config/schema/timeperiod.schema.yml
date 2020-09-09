@@ -1,0 +1,7 @@
+field.formatter.settings.number_timeperiod:
+  type: mapping
+  label: 'Time period granularity'
+  mapping:
+    granularity:
+      type: integer
+      lable: 'Granularity'
