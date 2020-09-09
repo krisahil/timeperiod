@@ -25,5 +25,7 @@ and the maximum value and step size can be configured.
  
  
 Initial development has been sponsored by doloops.net.
+
 Initial Drupal 8 port by [Chi](https://www.drupal.org/u/chi)
+
 8.x-2.x by [r0nn1ef](https://www.drupal.org/u/r0nn1ef)
