@@ -199,7 +199,11 @@ class TimeperiodWidget extends WidgetBase {
    */
   public function massageFormValues(array $values, array $form, FormStateInterface $form_state) {
     foreach ($values as $delta => $value) {
-      $values[$delta]['value'] = 86400 * $value['days'] + 3600 * $value['hours'] + 60 * $value['minutes'] + $value['seconds'];
+      $values[$delta]['value'] =
+        86400  * (int) ($value['days'] ?? 0)
+        + 3600 * (int) ($value['hours'] ?? 0)
+        + 60   * (int) ($value['minutes'] ?? 0)
+        + (int) ($value['seconds'] ?? 0);
     }
     return $values;
   }
