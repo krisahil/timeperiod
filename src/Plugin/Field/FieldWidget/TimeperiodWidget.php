@@ -178,7 +178,9 @@ class TimeperiodWidget extends WidgetBase {
           '#max' => $unit['max'],
           '#step' => $settings[$key . '_step'],
           '#default_value' => intval($value / $unit['value']),
-          '#class' => ['timeperiod-unit', 'timeperiod-unit-' . $key],
+          '#attributes' => [
+            'class' => ['timeperiod__unit', 'timeperiod__unit--' . $key],
+          ]
         ];
         $value -= $widget[$key]['#default_value'] * $unit['value'];
       }
@@ -187,6 +189,7 @@ class TimeperiodWidget extends WidgetBase {
     $element['#type'] = 'fieldgroup';
     $element['#tree'] = TRUE;
     $element['#collapsible'] = FALSE;
+    $element['#attributes']['class'][] = 'timeperiod';
     $element = $element + $widget;
     $element['#attached']['library'][] = 'timeperiod/timeperiod-form';
 
